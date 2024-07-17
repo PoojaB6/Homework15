@@ -19,4 +19,13 @@ public class OrderTest extends BaseSetupApi {
         softly.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
         softly.assertThat(response.getContentType()).isEqualTo(ContentType.JSON.toString());
     }
+
+    @Test
+    void getOrderAndCheckResponse() {
+
+        Response response = ApiClient.getOrders(getAuthenticatedRequestSpecification(bearerToken) );
+
+        softly.assertThat(response.getStatusCode()).isEqualTo(HttpStatus.SC_OK);
+        softly.assertThat(response.getContentType()).isEqualTo(ContentType.JSON.toString());
+    }
 }
