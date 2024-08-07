@@ -7,7 +7,7 @@ public class OrderDto {
     String customerName;
     String customerPhone;
     String comment;
-    long id;
+    public long id;
 
 //Constructor
 
